@@ -1,5 +1,5 @@
 class raspberry_dev::toolchain {
-  $toolchain_url = 'http://io.develephant.com:10000/raspberrypi/raspberry-gcc-toolchain_2.0_x86_64.deb'
+  $toolchain_url = 'http://io.develephant.com:10000/raspbian/raspberry-gcc-toolchain_2.0_x86_64.deb'
   $toolchain_deb_filename = 'raspberry-gcc-toolchain_2.0_x86_64.deb'
 
   exec {'download-toolchain':
