@@ -9,12 +9,12 @@ class raspberry_dev::raspbian_chroot {
       ${raspberry_dev::config::sbox2_container_name} \
       ${raspberry_dev::config::arm_gcc_path}"
 
-  $bootstrap_cmd = 
+  $bootstrap_cmd =
       "fakeroot debootstrap --verbose --foreign --variant=scratchbox \
-        --arch armhf --keyring /etc/apt/trusted.gpg wheezy \
+        --arch armhf --keyring /etc/apt/trusted.gpg jessie \
         ${raspberry_dev::config::sbox2_container_path} ${raspbian_mirror}"
 
-  # without this, sbox2 sees HOME as "/root" for some reason, and all sb2 
+  # without this, sbox2 sees HOME as "/root" for some reason, and all sb2
   # commands fail.
   $sbox2_required_env_flags = ["HOME=/home/vagrant"]
 

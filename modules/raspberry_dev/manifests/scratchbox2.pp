@@ -8,9 +8,9 @@ class raspberry_dev::scratchbox2 {
     creates => "${raspberry_dev::config::debs_dir}/${sbox2_deb_filename}"
 
   } -> package {'raspberry-scratchbox2':
-    provider => dpkg, 
+    provider => dpkg,
     source  => "${raspberry_dev::config::debs_dir}/${sbox2_deb_filename}",
     ensure  => installed
 
-  } 
+  }
 }
