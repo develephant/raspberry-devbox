@@ -8,7 +8,7 @@ Vagrant::Config.run do |config|
 
   config.vm.define :nox do |box|
     # Every Vagrant virtual environment requires a box to build off of.
-    box.vm.box = "precise64"
+    box.vm.box = "ARTACK/debian-jessie"
     # The url from where the 'config.vm.box' box will be fetched if it
     # doesn't already exist on the user's system.
     box.vm.box_url = "https://atlas.hashicorp.com/ARTACK/boxes/debian-jessie"
